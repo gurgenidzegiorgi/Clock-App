@@ -94,9 +94,6 @@ const ClockComponent = styled.div`
 			}
 		}
 		.time-div {
-			display: flex;
-			align-items: baseline;
-			gap: 1.3rem;
 			p {
 				font-size: 15rem;
 				line-height: 15rem; /* 100% */
@@ -110,6 +107,33 @@ const ClockComponent = styled.div`
 		.location {
 			font-size: 1.8rem;
 			letter-spacing: 0.36rem;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		flex-direction: unset;
+		align-items: flex-end;
+		justify-content: space-between;
+		.greeting-div {
+			p,
+			span {
+				font-size: 2rem;
+			}
+		}
+		.time-div {
+			p {
+				font-size: 20rem;
+				line-height: 20rem; /* 100% */
+				letter-spacing: -0.4375rem;
+			}
+
+			span {
+				font-size: 4rem;
+			}
+		}
+		.location {
+			font-size: 2.4rem;
+			line-height: 2.8rem;
 		}
 	}
 `;
