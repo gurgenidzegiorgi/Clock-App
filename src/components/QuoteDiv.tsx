@@ -42,6 +42,13 @@ const QuoteComponent = styled.div<{ $isVisible: boolean }>`
 			line-height: 2.8rem; /* 183.333% */
 		}
 	}
+
+	@media screen and (min-width: 1440px) {
+		.quote,
+		.author {
+			width: 52%;
+		}
+	}
 `;
 
 const QuoteDiv = ({ moreContent }: { moreContent: boolean }) => {
