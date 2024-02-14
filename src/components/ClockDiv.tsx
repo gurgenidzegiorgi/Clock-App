@@ -76,6 +76,43 @@ const ClockComponent = styled.div`
 		text-transform: uppercase;
 	}
 
+	@media screen and (min-width: 768px) {
+		.greeting-div {
+			div {
+				display: flex;
+
+				span {
+					display: block;
+				}
+
+				p,
+				span {
+					font-size: 1.8rem;
+					line-height: 2.8rem;
+					letter-spacing: 0.36rem;
+				}
+			}
+		}
+		.time-div {
+			display: flex;
+			align-items: baseline;
+			gap: 1.3rem;
+			p {
+				font-size: 15rem;
+				line-height: 15rem; /* 100% */
+				letter-spacing: -0.4375rem;
+			}
+
+			span {
+				font-size: 3.2rem;
+			}
+		}
+		.location {
+			font-size: 1.8rem;
+			letter-spacing: 0.36rem;
+		}
+	}
+`;
 
 const ClockDiv = ({
 	currentTime,
