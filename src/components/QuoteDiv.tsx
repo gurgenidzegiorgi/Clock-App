@@ -34,6 +34,15 @@ const QuoteComponent = styled.div<{ $isVisible: boolean }>`
 		cursor: pointer;
 	}
 
+	@media screen and (min-width: 768px) {
+		.quote,
+		.author {
+			width: 60%;
+			font-size: 1.8rem;
+			line-height: 2.8rem; /* 183.333% */
+		}
+	}
+`;
 
 const QuoteDiv = ({ moreContent }: { moreContent: boolean }) => {
 	const [quote, setQuote] = useState<Quote | null>(null);
