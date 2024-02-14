@@ -2,10 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "styled-components";
 
-type Quote = {
-	author: string;
-	content: string;
-};
+import { Quote } from "../types/Types";
 
 const QuoteComponent = styled.div<{ $isVisible: boolean }>`
 	opacity: ${({ $isVisible }) => (!$isVisible ? "1" : "0")};

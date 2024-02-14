@@ -2,16 +2,11 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { styled } from "styled-components";
 
+import { CurrentTime, GeoLocationData } from "../types/Types";
 import Button from "./Button";
 
 import sunSvg from "../assets/images/icon-sun.svg";
 import moonSvg from "../assets/images/icon-moon.svg";
-
-type CurrentTime = {
-	hour: string;
-	minute: string;
-	abbreviation: string;
-};
 
 const ClockComponent = styled.div`
 	display: flex;
@@ -146,7 +141,7 @@ const ClockDiv = ({
 	dataAndTimeData,
 }: {
 	currentTime: CurrentTime;
-	geoLocation: { city: string; countryCode: string };
+	geoLocation: GeoLocationData;
 	setMoreContent: Function;
 	moreContent: boolean;
 	dataAndTimeData: object;

@@ -1,22 +1,6 @@
 import { styled } from "styled-components";
 
-type TimezoneData = {
-	abbreviation: string;
-	client_ip: string;
-	datetime: string; // ISO 8601 formatted date-time string
-	day_of_week: number;
-	day_of_year: number;
-	dst: boolean;
-	dst_from: null;
-	dst_offset: number;
-	dst_until: null;
-	raw_offset: number;
-	timezone: string;
-	unixtime: number;
-	utc_datetime: string; // ISO 8601 formatted date-time string
-	utc_offset: string; // String representing time zone offset
-	week_number: number;
-};
+import { TimezoneData } from "../types/Types";
 
 const ContentComponent = styled.div<{
 	$isVisible: boolean;
