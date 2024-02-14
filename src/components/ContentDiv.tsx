@@ -40,6 +40,13 @@ const ContentComponent = styled.div<{
 		overflow: hidden;
 	}
 
+	.divider {
+		display: none;
+		width: 0.1rem;
+		height: 100%;
+		opacity: 0.25;
+		background: #303030;
+	}
 	.box {
 		display: flex;
 		flex-direction: column;
@@ -98,6 +105,22 @@ const ContentComponent = styled.div<{
 			}
 		}
 	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 12rem 16.4rem 12rem 16.4rem;
+		margin: 0 -16.4rem;
+
+		.divider {
+			display: block;
+		}
+		.box {
+			.content-div {
+				p {
+					font-size: 4rem;
+				}
+			}
+		}
+	}
 `;
 
 const ContentDiv = ({
@@ -121,6 +144,7 @@ const ContentDiv = ({
 					<p>{dataAndTimeData?.day_of_year}</p>
 				</div>
 			</div>
+			<div className="divider"></div>
 			<div className="box">
 				<div className="content-div">
 					<p className="info-title">DAY OF THE WEEK</p>
