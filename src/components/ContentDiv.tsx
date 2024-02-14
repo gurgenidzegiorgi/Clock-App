@@ -73,6 +73,32 @@ const ContentComponent = styled.div<{
 		}
 	}
 
+	@media screen and (min-width: 768px) {
+		flex-direction: unset;
+		justify-content: space-between;
+		padding: 10rem 6.4rem;
+		margin: 0 0 0 -6.4rem;
+		max-height: ${({ $isVisible }) => ($isVisible ? "44rem" : "0")};
+
+		.box {
+			gap: 5rem;
+
+			.content-div {
+				flex-direction: column;
+				align-items: unset;
+
+				.info-title {
+					font-size: 1.3rem;
+					line-height: 2.8rem;
+				}
+
+				p {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+`;
 
 const ContentDiv = ({
 	dataAndTimeData,
