@@ -19,10 +19,10 @@ const GlobalStyles = createGlobalStyle<{ $currentHour: string }>`
 		font-family: 'Inter', sans-serif;
 		height: 100vh;
 		height: 100dvh;
-		background-image:${({ $currentHour }) =>
-			parseInt($currentHour) < 5 && parseInt($currentHour) > 18
-				? `url(${bgNighty})`
-				: `url(${bgSunny})`};
+		background:${({ $currentHour }) =>
+			parseInt($currentHour) > 5 && parseInt($currentHour) < 18
+				? `url(${bgSunny})`
+				: `url(${bgNighty})`};
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
