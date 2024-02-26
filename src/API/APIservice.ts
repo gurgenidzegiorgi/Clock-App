@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiService = axios.create({
-	baseURL: "http://worldtimeapi.org/api",
+	baseURL: "https://worldtimeapi.org/api",
 });
 
 export const getDateTimeForTimeZone = async (timezone: string) => {
@@ -16,7 +16,7 @@ export const getDateTimeForTimeZone = async (timezone: string) => {
 
 export const getGeoLocation = async () => {
 	try {
-		const response = await axios.get("http://ip-api.com/json");
+		const response = await axios.get("https://ipwho.is/");
 		return response.data;
 	} catch (error) {
 		console.error("Error fetching geolocation:", error);
