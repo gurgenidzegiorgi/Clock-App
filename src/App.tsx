@@ -12,17 +12,13 @@ import ClockDiv from "./components/ClockDiv";
 import ContentDiv from "./components/ContentDiv";
 
 import bgSunny from "./assets/images/bg-day.jpeg";
-import bgNighty from "./assets/images/bg-night.jpeg";
 
-const GlobalStyles = createGlobalStyle<{ $currentHour: string }>`
+const GlobalStyles = createGlobalStyle`
 	body {
 		font-family: 'Inter', sans-serif;
 		height: 100vh;
 		height: 100dvh;
-		background:${({ $currentHour }) =>
-			parseInt($currentHour) > 5 && parseInt($currentHour) < 18
-				? `url(${bgSunny})`
-				: `url(${bgNighty})`};
+		background:url(${bgSunny});
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -73,7 +69,7 @@ function App() {
 			try {
 				const geoLocationData = await getGeoLocation();
 				const dataAndTime = await getDateTimeForTimeZone(
-					geoLocationData?.timezone
+					geoLocationData?.timezone.id
 				);
 				const currentTime = new Date(dataAndTime?.datetime).toLocaleString(
 					"en-US",
@@ -102,7 +98,7 @@ function App() {
 
 	return (
 		<Container $moreContent={moreContent}>
-			<GlobalStyles $currentHour={currentTime?.hour ?? "0"} />
+			<GlobalStyles />
 			<QuoteDiv moreContent={moreContent} />
 			<ClockDiv
 				currentTime={currentTime}
