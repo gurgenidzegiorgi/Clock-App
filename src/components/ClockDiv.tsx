@@ -188,7 +188,7 @@ const ClockDiv = ({
 				</div>
 				<p className="location">
 					{geoLocation &&
-						`IN ${geoLocation?.city}, ${geoLocation?.countryCode}`.toUpperCase()}
+						`IN ${geoLocation?.city}, ${geoLocation?.country_code}`.toUpperCase()}
 				</p>
 			</span>
 			<Button handleMoreContent={handleMoreContent} moreContent={moreContent} />
