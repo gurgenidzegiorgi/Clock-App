@@ -26,7 +26,7 @@ export type GeoLocationData = {
 	as: string;
 	city: string;
 	country: string;
-	countryCode: string;
+	country_code: string;
 	isp: string;
 	lat: number;
 	lon: number;
